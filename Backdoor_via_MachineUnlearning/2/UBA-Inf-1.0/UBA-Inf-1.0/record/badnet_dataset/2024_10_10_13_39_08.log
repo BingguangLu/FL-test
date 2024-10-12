@@ -1,0 +1,82 @@
+2024-10-10:13:39:08 [INFO    ] [prototype.py:126] {'add_cover': 1,
+ 'amp': False,
+ 'attack': 'badnet',
+ 'attack_label_trans': 'all2one',
+ 'attack_target': 6,
+ 'batch_size': 128,
+ 'bd_yaml_path': '../config/attack/badnet/default.yaml',
+ 'clabel': 4,
+ 'client_optimizer': 'sgd',
+ 'cover_method': 'label-consistent',
+ 'cratio': 0.004,
+ 'dataset': 'cifar10',
+ 'dataset_path': '../data/cifar10',
+ 'device': 'cuda:2',
+ 'epochs': 0,
+ 'frequency_save': 0,
+ 'img_size': (32, 32, 3),
+ 'input_channel': 3,
+ 'input_height': 32,
+ 'input_width': 32,
+ 'lr': 0.01,
+ 'lr_scheduler': 'CosineAnnealingLR',
+ 'model': 'preactresnet18',
+ 'non_blocking': True,
+ 'num_classes': 10,
+ 'num_workers': 4,
+ 'patch_mask_path': '../resource/badnet/trigger_image_grid.png',
+ 'pin_memory': True,
+ 'pratio': 0.012,
+ 'prefetch': False,
+ 'random_seed': 0,
+ 'save_folder_name': 'badnet_dataset',
+ 'save_path': '../record/badnet_dataset',
+ 'sgd_momentum': 0.9,
+ 'terminal_info': ['./attack/badnet.py',
+                   '--yaml_path',
+                   '../config/attack/prototype/cifar10.yaml',
+                   '--save_folder_name',
+                   'badnet_dataset',
+                   '--add_cover',
+                   '1',
+                   '--epoch',
+                   '00',
+                   '--pratio',
+                   '0.012',
+                   '--cratio',
+                   '0.004',
+                   '--attack_target',
+                   '6'],
+ 'wd': 0.0005,
+ 'yaml_path': '../config/attack/prototype/cifar10.yaml'}
+2024-10-10:13:39:08 [DEBUG   ] [prototype.py:128] Only INFO or above level log will show in cmd. DEBUG level log only will show in log file.
+2024-10-10:13:39:08 [DEBUG   ] [prototype.py:134] Getting git info fails.
+2024-10-10:13:39:08 [INFO    ] [badnet.py:102] stage1 start
+2024-10-10:13:40:28 [DEBUG   ] [prototype.py:154] dataset_and_transform_generate done
+2024-10-10:13:40:28 [DEBUG   ] [bd_dataset_v2.py:70] Not DatasetFolder or ImageFolder, so iter through
+2024-10-10:13:40:29 [DEBUG   ] [bd_dataset_v2.py:70] Not DatasetFolder or ImageFolder, so iter through
+2024-10-10:13:40:29 [DEBUG   ] [backdoor_generate_poison_index.py:35] Reminder: plz note that if p_num or pratio exceed the number of possible candidate samples
+ then only maximum number of samples will be applied
+2024-10-10:13:40:29 [DEBUG   ] [backdoor_generate_poison_index.py:36] Reminder: priority p_num > pratio, and choosing fix number of sample is prefered if possible 
+2024-10-10:13:40:29 [INFO    ] [backdoor_generate_poison_index.py:60] poison num:600.0,real pratio:0.012
+2024-10-10:13:40:29 [DEBUG   ] [backdoor_generate_poison_index.py:91] Reminder: plz note that if c_num or cratio exceed the number of possible candidate samples
+ then only maximum number of samples will be applied
+2024-10-10:13:40:29 [DEBUG   ] [backdoor_generate_poison_index.py:92] Reminder: priority c_num > cratio, and choosing fix number of sample is prefered if possible 
+2024-10-10:13:40:29 [DEBUG   ] [backdoor_generate_poison_index.py:93] Reminder: once a sample is poisoned, it won't be made as a cover sample at the same time. 
+2024-10-10:13:40:29 [INFO    ] [backdoor_generate_poison_index.py:134] cover num:200.0,real pratio:0.004
+2024-10-10:13:40:29 [DEBUG   ] [badnet.py:152] poison train idx is saved
+2024-10-10:13:40:29 [INFO    ] [bd_dataset_v2.py:138] save file format is .png
+2024-10-10:13:40:29 [INFO    ] [bd_dataset_v2.py:138] save file format is .png
+2024-10-10:13:40:30 [DEBUG   ] [backdoor_generate_poison_index.py:35] Reminder: plz note that if p_num or pratio exceed the number of possible candidate samples
+ then only maximum number of samples will be applied
+2024-10-10:13:40:30 [DEBUG   ] [backdoor_generate_poison_index.py:36] Reminder: priority p_num > pratio, and choosing fix number of sample is prefered if possible 
+2024-10-10:13:40:30 [INFO    ] [backdoor_generate_poison_index.py:60] poison num:9000.0,real pratio:0.9
+2024-10-10:13:40:30 [INFO    ] [bd_dataset_v2.py:138] save file format is .png
+2024-10-10:13:40:30 [INFO    ] [bd_dataset_v2.py:138] save file format is .png
+2024-10-10:13:40:41 [INFO    ] [badnet.py:210] stage2 start
+2024-10-10:13:40:41 [DEBUG   ] [model_trainer_generate.py:61] image_size ONLY apply for vit!!!
+If you use vit make sure you set the image size!
+2024-10-10:13:40:41 [DEBUG   ] [model_trainer_generate.py:67] Make sure you want PreActResNet18, which is NOT resnet18.
+2024-10-10:13:40:41 [DEBUG   ] [trainer_cls.py:1751] This class REQUIRE bd dataset to implement overwrite methods. This is NOT a general class for all cls task.
+2024-10-10:13:40:41 [INFO    ] [trainer_cls.py:956] Do NOT set the settings/parameters attr manually after you start training!
+You may break the relationship between them.
